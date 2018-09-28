@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网易严选</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .header {
+            margin: 0 auto;
+            height: 240px;
+        }
+        
+        .header-top {
+            height: 36px;
+            line-height: 36px;
+            background-color: #383838;
+        }
+        
+        .header-top-container {
+            width: 1090px;
+            margin: 0 auto;
+        }
+        
+        .header-slogan {
+            float: left;
+        }
+        
+        .header-top a:hover {
+            color: white;
+        }
+        
+        .header-notice {
+            float: left;
+            margin-left: 30px;
+            padding-left: 26px;
+            height: 36px;
+            line-height: 36px;
+            background: url('imgs/notice.gif') center left no-repeat;
+            overflow: hidden;
+        }
+        
+        .header-notice ul {
+            position: relative;
+            top: 0;
+        }
+        
+        .header-notice a {
+            color: #b4a078;
+            text-decoration: underline;
+        }
+        
+        .header-notice a:hover {
+            text-decoration: none;
+        }
+        
+        .header-top-r {
+            float: right;
+        }
+        
+        .header-top-r>ul>li {
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .header-top-r>ul>li:first-child {
+            margin-right: 20px;
+        }
+        
+        .header-top-r>ul>li a {
+            display: inline-block;
+        }
+        
+        .pipe::after {
+            content: '';
+            margin-left: 10px;
+            border-right: 1px solid #5c5c5c;
+        }
+        
+        .header-icon-upArrow {
+            margin-left: 10px;
+            display: inline-block;
+            background: url(imgs/icon_s.png) no-repeat;
+            background-position: 0px -321px;
+            width: 11px;
+            height: 5px;
+            vertical-align: middle;
+        }
+        
+        .header-cus-service,
+        .header-app {
+            position: relative;
+        }
+        
+        .header-cus-service:hover .header-icon-upArrow {
+            transform: rotate(180deg);
+        }
+        
+        .header-top-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 83px;
+            border: 1px solid #ddd;
+            padding: 3px 0;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-cus-service:hover .cus-service-list,
+        .header-app:hover .app-list {
+            display: block;
+        }
+        
+        .cus-service-list li,
+        .app-list {
+            text-align: center;
+        }
+        
+        .cus-service-list a {
+            color: #999;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .cus-service-list li:last-child a {
+            border-bottom: 0;
+        }
+        
+        .cus-service-list a:hover,
+        .app-list p {
+            color: #b4a078;
+        }
+        
+        .header-icon-upArrowShadow {
+            position: absolute;
+            top: -7px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: inline-block;
+            background: url(imgs/icon_s.png) no-repeat;
+            background-position: 0 -336px;
+            width: 12px;
+            height: 7px;
+            vertical-align: middle;
+        }
+        
+        .header-icon-app {
+            display: inline-block;
+            background: url(imgs/icon_s.png) no-repeat;
+            background-position: 0 0;
+            width: 7px;
+            height: 11px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        
+        .app-list {
+            width: 139px;
+            left: -43px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div class="header-top-l">
+                    <a href="#" class="header-slogan">好的生活，没那么贵</a>
+                    <div class="header-notice">
+                        <ul id="notice">
+                            <li><a href="#">【5折SALE】爆款内裤穿搭好物19.5...</a></li>
+                            <li><a href="#">【严选x中行联名卡】达标领80元礼品卡></a></li>
+                            <li><a href="#">【福利】下载严选APP，抢1元包邮团，领...</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-top-r">
+                    <ul>
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#" class="pipe">注册</a></li>
+                        <li><a href="#" class="pipe">我的订单</a></li>
+                        <li><a href="#" class="pipe">会员</a></li>
+                        <li><a href="#" class="pipe">甄选家</a></li>
+                        <li><a href="#" class="pipe">企业采购</a></li>
+                        <li class="header-cus-service">
+                            <a href="#" class="pipe">客户服务 <i class="header-icon-upArrow"></i></a>
+                            <div class="header-top-dropdown cus-service-list">
+                                <i class="header-icon-upArrowShadow"></i>
+                                <ul>
+                                    <li><a href="#">在线客服</a></li>
+                                    <li><a href="#">帮助中心</a></li>
+                                    <li><a href="#">商务合作</a></li>
+                                    <li><a href="#">开放平台</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-app">
+                            <a href="#"><i class="header-icon-app"></i>APP</a>
+                            <div class="header-top-dropdown app-list">
+                                <i class="header-icon-upArrowShadow"></i>
+                                <canvas width="117" height="117">此处是一个二维码</canvas>
+                                <p>下载领1000元新人礼包</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 这里放菜单栏 -->
+        <div style="text-align:center;font-size:20px;">菜单栏</div>
+    </header>
+    <div>
+        <!-- 这里放轮播图 -->
+        <section style="height:420px;text-align:center;font-size:20px;border-top:1px solid blue;border-bottom:1px solid blue;">轮播图</section>
+        <section>品牌制造商</section>
+    </div>
+    <footer></footer>
+
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $().ready(function() {
+            noticeAutoScroll("#notice");
+        })
+
+        function noticeAutoScroll(obj) {
+            var firstItem = $(obj).children().first();
+            firstItem.clone().appendTo(obj);
+            var perScrollHeight = firstItem.height();
+            var moveTop = 0;
+
+            setInterval(function() {
+                $(obj).animate({
+                    top: -moveTop + 'px'
+                }, 500, function() {
+                    moveTop += perScrollHeight;
+                    if ($(obj).css("top") === "-108px") {
+                        $(obj).css("top", "0");
+                        moveTop = 0;
+                    }
+                });
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
