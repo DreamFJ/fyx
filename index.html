@@ -8,6 +8,16 @@
     <title>网易严选</title>
     <link rel="stylesheet" href="css/reset.css">
     <style>
+        body,
+        button,
+        input,
+        select,
+        textarea,
+        code {
+            font-family: "Heiti SC", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", verdana;
+        }
+        /* -----header start!----- */
+        
         .header {
             margin: 0 auto;
             height: 240px;
@@ -24,8 +34,8 @@
             margin: 0 auto;
         }
         
-        .header-slogan {
-            float: left;
+        .header-top a {
+            color: #ccc;
         }
         
         .header-top a:hover {
@@ -54,10 +64,6 @@
         
         .header-notice a:hover {
             text-decoration: none;
-        }
-        
-        .header-top-r {
-            float: right;
         }
         
         .header-top-r>ul>li {
@@ -160,6 +166,102 @@
             width: 139px;
             left: -43px;
         }
+        /* -----header end!----- */
+        
+        .brand-maker {
+            width: 1090px;
+            margin: 30px auto 0;
+        }
+        
+        .brand-maker-top {
+            margin-bottom: 20px;
+        }
+        
+        .brand-maker-top::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .b-title {
+            margin-right: 20px;
+        }
+        
+        .b-title>h3 {
+            font-size: 28px;
+            display: inline-block;
+        }
+        
+        .more {
+            display: inline-block;
+            padding-top: 14px;
+            margin-left: 30px;
+        }
+        
+        .manufacturer {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .brand-maker-container .big {
+            height: 320px;
+        }
+        
+        .manu-desc {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            line-height: 1;
+        }
+        
+        .manu-name {
+            position: relative;
+            font-size: 24px;
+            margin: 48px 0 19px;
+        }
+        
+        .manu-price {
+            border-top: 1px solid #666;
+            padding-top: 17px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        
+        .manufacturer:hover {
+            color: #333;
+        }
+        /* .manufacturer:hover .manu-dirnk {
+            transform: scale(1.1);
+            transition: transform 1s;
+        } */
+        
+        .brand-maker-container,
+        .manufacturer-s {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .manufacturer-s {
+            flex-direction: column;
+        }
+        
+        .manufacturer-s .small {
+            height: 155px;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -3px;
+            width: 32px;
+            height: 21px;
+            line-height: 19px;
+            font-size: 11px;
+            background: url(imgs/badge.png) no-repeat;
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -168,7 +270,7 @@
         <div class="header-top">
             <div class="header-top-container">
                 <div class="header-top-l">
-                    <a href="#" class="header-slogan">好的生活，没那么贵</a>
+                    <a href="#" class="fl">好的生活，没那么贵</a>
                     <div class="header-notice">
                         <ul id="notice">
                             <li><a href="#">【5折SALE】爆款内裤穿搭好物19.5...</a></li>
@@ -177,7 +279,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-top-r">
+                <div class="header-top-r fr">
                     <ul>
                         <li><a href="#">登录</a></li>
                         <li><a href="#" class="pipe">注册</a></li>
@@ -216,7 +318,55 @@
     <div>
         <!-- 这里放轮播图 -->
         <section style="height:420px;text-align:center;font-size:20px;border-top:1px solid blue;border-bottom:1px solid blue;">轮播图</section>
-        <section>品牌制造商</section>
+        <section>
+            <div class="brand-maker">
+                <div class="brand-maker-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>品牌制造商</h3>
+                        </a>
+                        <span class="s-title fz14">工厂直达消费者，剔除品牌溢价</span>
+                    </div>
+                    <div class="fr lh1">
+                        <a href="#" class="more fz14">更多制造商 ></a>
+                    </div>
+                </div>
+                <div class="brand-maker-container">
+                    <a href="#" class="manufacturer big" id="manufacturer">
+                        <img id="manu-dirnk" src="imgs/drink.jpg" alt="drink" width="100%" height="100%">
+                        <div class="manu-desc">
+                            <p class="manu-name">MK制造商</p>
+                            <p class="manu-price">239元起</p>
+                        </div>
+                    </a>
+                    <a href="#" class="manufacturer big">
+                        <img src="imgs/drink.jpg" alt="drink" width="100%" height="100%">
+                        <div class="manu-desc">
+                            <p class="manu-name">海外制造商
+                                <span class="badge">上新</span>
+                            </p>
+                            <p class="manu-price">9.9元起</p>
+                        </div>
+                    </a>
+                    <div class="manufacturer-s">
+                        <a href="#" class="manufacturer small">
+                            <img src="imgs/shoes.png" alt="drink" width="100%" height="100%">
+                            <div class="manu-desc">
+                                <p class="manu-name">CK制造商</p>
+                                <p class="manu-price">25元起</p>
+                            </div>
+                        </a>
+                        <a href="#" class="manufacturer small">
+                            <img src="imgs/shoes.png" alt="drink" width="100%" height="100%">
+                            <div class="manu-desc">
+                                <p class="manu-name">新秀丽制造商</p>
+                                <p class="manu-price">34.9元起</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <footer></footer>
 
@@ -224,6 +374,18 @@
     <script>
         $().ready(function() {
             noticeAutoScroll("#notice");
+
+            $("#manufacturer").hover(function() {
+                $("#manu-dirnk").css({
+                    "transform": "scale(1.05)",
+                    "transition": "transform 1s"
+                })
+            }, function() {
+                $("#manu-dirnk").css({
+                    "transform": "scale(1)",
+                    "transition": "transform 1s"
+                })
+            });
         })
 
         function noticeAutoScroll(obj) {

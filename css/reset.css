@@ -131,10 +131,14 @@ a {
     padding: 0;
     border: 0;
     text-decoration: none;
-    color: #ccc;
+    color: #333;
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+}
+
+a:hover {
+    color: #b4a078;
 }
 
 ins {
@@ -177,4 +181,20 @@ hr {
 input,
 select {
     vertical-align: middle;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.lh1 {
+    line-height: 1;
+}
+
+.fz14 {
+    font-size: 14px;
 }
