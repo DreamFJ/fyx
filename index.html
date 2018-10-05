@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -604,6 +603,327 @@
             line-height: 14px;
             margin-left: 10px;
         }
+        
+        .manufacturer.small .manu-name {
+            position: relative;
+            margin: 32px 0 10px 20px;
+            font-size: 20px;
+            text-align: left;
+        }
+        
+        .manufacturer.small .manu-price {
+            margin-left: 20px;
+            float: left;
+            padding-top: 10px;
+        }
+        /* 新品首发 */
+        
+        .new-products {
+            margin-top: 60px;
+        }
+        /* 人气推荐 */
+        
+        .recommendation {
+            padding: 60px 0;
+            background: #f4f0ea;
+        }
+        
+        .tabList {
+            display: inline-block;
+            margin-left: 13px;
+        }
+        
+        .tabListItem {
+            float: left;
+            font-size: 14px;
+            height: 28px;
+            line-height: 28px;
+            width: 70px;
+            text-align: center;
+            margin-right: 55px;
+        }
+        
+        .tabListItem.active {
+            border-bottom: 2px solid #b4a078;
+        }
+        
+        .tabListItem.active a {
+            color: #b4a078;
+        }
+        
+        .recommendationItem {
+            background-color: #fff;
+            text-align: center;
+        }
+        
+        .recomm-first {
+            width: 390px;
+        }
+        
+        .recomm-first img {
+            width: 320px;
+            height: 320px;
+            margin: 40px 35px;
+        }
+        
+        .recomm-first h4 {
+            font-size: 18px;
+            margin-bottom: 13px;
+        }
+        
+        .recomm-container h4 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .recommendationItem .hd {
+            position: relative;
+            border-bottom: 1px solid #F4F0EA;
+        }
+        
+        .recomm-first .hd {
+            margin-bottom: 18px;
+        }
+        
+        .recomm-remain .hd {
+            margin-bottom: 8px;
+        }
+        
+        .hd .colorNum {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #a7936e;
+            border: 1px solid #b3a07d;
+            border-radius: 5px;
+            padding: 0 4px;
+            background-color: #f4f0ea;
+        }
+        
+        .commonTag {
+            height: 20px;
+            color: #fff;
+            width: 200px;
+            margin: 0 auto 3px;
+            overflow: hidden;
+            margin-bottom: 4px;
+        }
+        
+        .recomm-first .commonTag {
+            margin-bottom: 10px;
+        }
+        
+        .itemTag {
+            display: inline-block;
+            background-color: #e36844;
+            color: #fff;
+            padding: 0 5px;
+            height: 20px;
+            line-height: 20px;
+            margin-left: 6px;
+        }
+        
+        .itemTag.hot {
+            background-color: #F28F2D;
+        }
+        
+        .recomm-container {
+            height: 530px;
+            overflow: hidden;
+        }
+        
+        .recomm-remain {
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .recomm-remain .recommendationItem {
+            margin-left: 10px;
+            width: 223px;
+            height: 260px;
+        }
+        
+        .recomm-remain img {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .recomm-price {
+            color: #d4282d;
+        }
+        
+        .counterPrice {
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 6px;
+        }
+        
+        .recomm-first .recomm-price {
+            font-size: 18px;
+        }
+        
+        .recomm-remain .recomm-price {
+            font-size: 13px;
+        }
+        
+        .recomm-remain-top .recommendationItem {
+            margin-bottom: 10px;
+        }
+        
+        .recomm-content-list li {
+            display: none;
+        }
+        /* 限时购 */
+        
+        .flashSale {
+            margin-top: 58px;
+        }
+        
+        .flashSale-container {
+            height: 377px;
+        }
+        
+        .countdown {
+            width: 224px;
+            height: 317px;
+            background: url('imgs/background.jpg') no-repeat;
+            padding-top: 60px;
+            text-align: center;
+            float: left;
+        }
+        
+        .playTime {
+            height: 36px;
+            font-size: 28px;
+            line-height: 36px;
+            color: #615548;
+            margin-bottom: 31px;
+        }
+        
+        .playTime::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin: 11px auto 0;
+            background: #61594b;
+        }
+        
+        .remainingTimeTitle {
+            margin-bottom: 18px;
+            font-size: 18px;
+            color: #615548;
+            line-height: 22px;
+            height: 22px;
+        }
+        
+        .remainingTime {
+            display: inline-block;
+            width: 40px;
+            color: #fff;
+            font-size: 18px;
+            line-height: 40px;
+            background-color: #615548;
+            border-radius: 2px;
+        }
+        
+        .colon {
+            font-weight: 700;
+            padding: 0 2px;
+        }
+        
+        .viewAll {
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            font-size: 14px;
+            background-color: #a7936e;
+            border-radius: 15px;
+            margin: 50px auto 0;
+        }
+        
+        .flashSaleList {
+            float: left;
+        }
+        
+        .flashSaleListItem {
+            float: left;
+            width: 433px;
+            height: 189px;
+            border: 1px solid #f0ece4;
+            border-left: none;
+        }
+        
+        .itemImg {
+            float: left;
+            width: 180px;
+            height: 180px;
+            margin: 3px 0;
+        }
+        
+        .itemImg a {
+            display: block;
+        }
+        
+        .itemDesc {
+            margin: 14px 0 0 180px;
+        }
+        
+        .itemDesc h2 {
+            height: 26px;
+            line-height: 26px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .itemDesc p {
+            height: 24px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #999;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .flashSaleListItem .itemNum {
+            padding: 14px 0 8px;
+            height: 14px;
+        }
+        
+        .numBar {
+            float: left;
+            width: 152px;
+            height: 10px;
+            margin: 2px 0;
+            border: 1px solid #f2cecd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .numBarIn {
+            width: 141.5px;
+            background-color: #ffe5e5;
+            height: 10px;
+        }
+        
+        .numTips {
+            display: inline-block;
+            height: 14px;
+            font-size: 14px;
+            color: #999;
+            line-height: 14px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 
@@ -614,10 +934,11 @@
                 <div class="header-top-l">
                     <a href="#" class="fl">好的生活，没那么贵</a>
                     <div class="header-notice">
-                        <ul id="notice">
+                        <ul id="notice" style="top: -13.1958px;">
                             <li><a href="#">【5折SALE】爆款内裤穿搭好物19.5...</a></li>
-                            <li><a href="#">【严选x中行联名卡】达标领80元礼品卡></a></li>
+                            <li><a href="#">【严选x中行联名卡】达标领80元礼品卡&gt;</a></li>
                             <li><a href="#">【福利】下载严选APP，抢1元包邮团，领...</a></li>
+                            <li><a href="#">【5折SALE】爆款内裤穿搭好物19.5...</a></li>
                         </ul>
                     </div>
                 </div>
@@ -670,7 +991,7 @@
                         <span class="s-title fz14">工厂直达消费者，剔除品牌溢价</span>
                     </div>
                     <div class="fr lh1">
-                        <a href="#" class="more fz14">更多制造商 ></a>
+                        <a href="#" class="more fz14">更多制造商 &gt;</a>
                     </div>
                 </div>
                 <div class="section-common-container brand-maker-container">
@@ -723,7 +1044,7 @@
                         <span class="s-title fz14">为你寻觅世间好物</span>
                     </div>
                     <div class="fr lh1">
-                        <a href="#" class="more fz14">更多新品 ></a>
+                        <a href="#" class="more fz14">更多新品 &gt;</a>
                     </div>
                 </div>
             </div>
@@ -748,7 +1069,7 @@
                             </div>
                         </div>
                         <div class="fr lh1">
-                            <a href="#" class="more fz14">更多推荐 ></a>
+                            <a href="#" class="more fz14">更多推荐 &gt;</a>
                         </div>
                     </div>
                     <div class="recomm-container">
@@ -976,7 +1297,7 @@
                         </a>
                     </div>
                     <div class="fr lh1">
-                        <a href="#" class="more fz14">更多抢购 ></a>
+                        <a href="#" class="more fz14">更多抢购 &gt;</a>
                     </div>
                 </div>
                 <div class="flashSale-container">
@@ -991,7 +1312,7 @@
                                 <span class="colon">:</span>
                                 <span class="remainingTime">01</span>
                             </div>
-                            <p class="viewAll">查看全部 ></p>
+                            <p class="viewAll">查看全部 &gt;</p>
                         </div>
                     </a>
                     <div class="flashSaleList">
@@ -1062,4 +1383,4 @@
     </script>
 </body>
 
-</html>s
+</html>
