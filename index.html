@@ -8,6 +8,16 @@
     <title>网易严选</title>
     <link rel="stylesheet" href="css/reset.css">
     <style>
+        body,
+        button,
+        input,
+        select,
+        textarea,
+        code {
+            font-family: "Heiti SC", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", verdana;
+        }
+        /* -----header start!----- */
+        
         .header {
             margin: 0 auto;
             height: 240px;
@@ -24,8 +34,8 @@
             margin: 0 auto;
         }
         
-        .header-slogan {
-            float: left;
+        .header-top a {
+            color: #ccc;
         }
         
         .header-top a:hover {
@@ -56,10 +66,6 @@
             text-decoration: none;
         }
         
-        .header-top-r {
-            float: right;
-        }
-        
         .header-top-r>ul>li {
             float: left;
             margin-right: 10px;
@@ -82,7 +88,7 @@
         .header-icon-upArrow {
             margin-left: 10px;
             display: inline-block;
-            background: url(imgs/icon_s.png) no-repeat;
+            background: url('imgs/icon_s.png') no-repeat;
             background-position: 0px -321px;
             width: 11px;
             height: 5px;
@@ -139,7 +145,7 @@
             right: 0;
             margin: auto;
             display: inline-block;
-            background: url(imgs/icon_s.png) no-repeat;
+            background: url('imgs/icon_s.png') no-repeat;
             background-position: 0 -336px;
             width: 12px;
             height: 7px;
@@ -148,7 +154,7 @@
         
         .header-icon-app {
             display: inline-block;
-            background: url(imgs/icon_s.png) no-repeat;
+            background: url('imgs/icon_s.png') no-repeat;
             background-position: 0 0;
             width: 7px;
             height: 11px;
@@ -160,6 +166,444 @@
             width: 139px;
             left: -43px;
         }
+        /* -----header end!----- */
+        /* -----section common css start!----- */
+        
+        .section-common-top {
+            margin-bottom: 20px;
+        }
+        
+        .section-common-top::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .section-common {
+            width: 1090px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .b-title {
+            margin-right: 20px;
+        }
+        
+        .b-title>h3 {
+            font-size: 28px;
+            display: inline-block;
+        }
+        
+        .more {
+            display: inline-block;
+            padding-top: 14px;
+            margin-left: 30px;
+        }
+        
+        .section-common-container,
+        .recomm-remain-top,
+        .recomm-remain-bottom,
+        .recomm-content-list li.active {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* -----section common css end!-----*/
+        /* 品牌制造商 */
+        
+        .brand-maker {
+            margin-top: 30px;
+        }
+        
+        .manufacturer {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .brand-maker-container .big {
+            height: 320px;
+        }
+        
+        .manu-desc {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            line-height: 1;
+        }
+        
+        .manufacturer.big .manu-name {
+            position: relative;
+            font-size: 24px;
+            margin: 48px 0 19px;
+        }
+        
+        .manu-price {
+            border-top: 1px solid #666;
+            padding-top: 17px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        
+        .enlarge {
+            transition: transform 1s;
+        }
+        
+        .manufacturer:hover {
+            color: #333;
+        }
+        
+        .manufacturer:hover .enlarge,
+        .recommendationItem:hover .enlarge {
+            transform: scale(1.05);
+        }
+        
+        .manufacturer-s {
+            flex-direction: column;
+        }
+        
+        .manufacturer-s .small {
+            height: 155px;
+        }
+        
+        .manufacturer-s .badge {
+            text-align: center;
+            margin-left: 5px;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -3px;
+            margin-left: 2px;
+            width: 32px;
+            height: 21px;
+            line-height: 19px;
+            font-size: 11px;
+            background: url('imgs/badge.png') no-repeat;
+            color: #fff;
+        }
+        
+        .manufacturer.small .manu-name {
+            position: relative;
+            margin: 32px 0 10px 20px;
+            font-size: 20px;
+            text-align: left;
+        }
+        
+        .manufacturer.small .manu-price {
+            margin-left: 20px;
+            float: left;
+            padding-top: 10px;
+        }
+        /* 新品首发 */
+        
+        .new-products {
+            margin-top: 60px;
+        }
+        /* 人气推荐 */
+        
+        .recommendation {
+            padding: 60px 0;
+            background: #f4f0ea;
+        }
+        
+        .tabList {
+            display: inline-block;
+            margin-left: 13px;
+        }
+        
+        .tabListItem {
+            float: left;
+            font-size: 14px;
+            height: 28px;
+            line-height: 28px;
+            width: 70px;
+            text-align: center;
+            margin-right: 55px;
+        }
+        
+        .tabListItem.active {
+            border-bottom: 2px solid #b4a078;
+        }
+        
+        .tabListItem.active a {
+            color: #b4a078;
+        }
+        
+        .recommendationItem {
+            background-color: #fff;
+            text-align: center;
+        }
+        
+        .recomm-first {
+            width: 390px;
+        }
+        
+        .recomm-first img {
+            width: 320px;
+            height: 320px;
+            margin: 40px 35px;
+        }
+        
+        .recomm-first h4 {
+            font-size: 18px;
+            margin-bottom: 13px;
+        }
+        
+        .recomm-container h4 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .recommendationItem .hd {
+            position: relative;
+            border-bottom: 1px solid #F4F0EA;
+        }
+        
+        .recomm-first .hd {
+            margin-bottom: 18px;
+        }
+        
+        .recomm-remain .hd {
+            margin-bottom: 8px;
+        }
+        
+        .hd .colorNum {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #a7936e;
+            border: 1px solid #b3a07d;
+            border-radius: 5px;
+            padding: 0 4px;
+            background-color: #f4f0ea;
+        }
+        
+        .commonTag {
+            height: 20px;
+            color: #fff;
+            width: 200px;
+            margin: 0 auto 3px;
+            overflow: hidden;
+            margin-bottom: 4px;
+        }
+        
+        .recomm-first .commonTag {
+            margin-bottom: 10px;
+        }
+        
+        .itemTag {
+            display: inline-block;
+            background-color: #e36844;
+            color: #fff;
+            padding: 0 5px;
+            height: 20px;
+            line-height: 20px;
+            margin-left: 6px;
+        }
+        
+        .itemTag.hot {
+            background-color: #F28F2D;
+        }
+        
+        .recomm-container {
+            height: 530px;
+            overflow: hidden;
+        }
+        
+        .recomm-remain {
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .recomm-remain .recommendationItem {
+            margin-left: 10px;
+            width: 223px;
+            height: 260px;
+        }
+        
+        .recomm-remain img {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .recomm-price {
+            color: #d4282d;
+        }
+        
+        .counterPrice {
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 6px;
+        }
+        
+        .recomm-first .recomm-price {
+            font-size: 18px;
+        }
+        
+        .recomm-remain .recomm-price {
+            font-size: 13px;
+        }
+        
+        .recomm-remain-top .recommendationItem {
+            margin-bottom: 10px;
+        }
+        
+        .recomm-content-list li {
+            display: none;
+        }
+        /* 限时购 */
+        
+        .flashSale {
+            margin-top: 58px;
+        }
+        
+        .flashSale-container {
+            height: 377px;
+        }
+        
+        .countdown {
+            width: 224px;
+            height: 317px;
+            background: url('imgs/background.jpg') no-repeat;
+            padding-top: 60px;
+            text-align: center;
+            float: left;
+        }
+        
+        .playTime {
+            height: 36px;
+            font-size: 28px;
+            line-height: 36px;
+            color: #615548;
+            margin-bottom: 31px;
+        }
+        
+        .playTime::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin: 11px auto 0;
+            background: #61594b;
+        }
+        
+        .remainingTimeTitle {
+            margin-bottom: 18px;
+            font-size: 18px;
+            color: #615548;
+            line-height: 22px;
+            height: 22px;
+        }
+        
+        .remainingTime {
+            display: inline-block;
+            width: 40px;
+            color: #fff;
+            font-size: 18px;
+            line-height: 40px;
+            background-color: #615548;
+            border-radius: 2px;
+        }
+        
+        .colon {
+            font-weight: 700;
+            padding: 0 2px;
+        }
+        
+        .viewAll {
+            width: 110px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            font-size: 14px;
+            background-color: #a7936e;
+            border-radius: 15px;
+            margin: 50px auto 0;
+        }
+        
+        .flashSaleList {
+            float: left;
+        }
+        
+        .flashSaleListItem {
+            float: left;
+            width: 433px;
+            height: 189px;
+            border: 1px solid #f0ece4;
+            border-left: none;
+        }
+        
+        .itemImg {
+            float: left;
+            width: 180px;
+            height: 180px;
+            margin: 3px 0;
+        }
+        
+        .itemImg a {
+            display: block;
+        }
+        
+        .itemDesc {
+            margin: 14px 0 0 180px;
+        }
+        
+        .itemDesc h2 {
+            height: 26px;
+            line-height: 26px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .itemDesc p {
+            height: 24px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #999;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .flashSaleListItem .itemNum {
+            padding: 14px 0 8px;
+            height: 14px;
+        }
+        
+        .numBar {
+            float: left;
+            width: 152px;
+            height: 10px;
+            margin: 2px 0;
+            border: 1px solid #f2cecd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .numBarIn {
+            width: 141.5px;
+            background-color: #ffe5e5;
+            height: 10px;
+        }
+        
+        .numTips {
+            display: inline-block;
+            height: 14px;
+            font-size: 14px;
+            color: #999;
+            line-height: 14px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 
@@ -168,7 +612,7 @@
         <div class="header-top">
             <div class="header-top-container">
                 <div class="header-top-l">
-                    <a href="#" class="header-slogan">好的生活，没那么贵</a>
+                    <a href="#" class="fl">好的生活，没那么贵</a>
                     <div class="header-notice">
                         <ul id="notice">
                             <li><a href="#">【5折SALE】爆款内裤穿搭好物19.5...</a></li>
@@ -177,7 +621,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-top-r">
+                <div class="header-top-r fr">
                     <ul>
                         <li><a href="#">登录</a></li>
                         <li><a href="#" class="pipe">注册</a></li>
@@ -216,7 +660,368 @@
     <div>
         <!-- 这里放轮播图 -->
         <section style="height:420px;text-align:center;font-size:20px;border-top:1px solid blue;border-bottom:1px solid blue;">轮播图</section>
-        <section>品牌制造商</section>
+        <section>
+            <div class="section-common brand-maker">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>品牌制造商</h3>
+                        </a>
+                        <span class="s-title fz14">工厂直达消费者，剔除品牌溢价</span>
+                    </div>
+                    <div class="fr lh1">
+                        <a href="#" class="more fz14">更多制造商 ></a>
+                    </div>
+                </div>
+                <div class="section-common-container brand-maker-container">
+                    <a href="#" class="manufacturer big">
+                        <img class="enlarge" src="imgs/drink.jpg" alt="drink" width="100%" height="100%">
+                        <div class="manu-desc">
+                            <p class="manu-name">MK制造商</p>
+                            <p class="manu-price">239元起</p>
+                        </div>
+                    </a>
+                    <a href="#" class="manufacturer big">
+                        <img class="enlarge" src="imgs/drink.jpg" alt="drink" width="100%" height="100%">
+                        <div class="manu-desc">
+                            <p class="manu-name">海外制造商
+                                <span class="badge">上新</span>
+                            </p>
+                            <p class="manu-price">9.9元起</p>
+                        </div>
+                    </a>
+                    <div class="section-common-container manufacturer-s">
+                        <a href="#" class="manufacturer small">
+                            <img class="enlarge" src="imgs/luggage.png" alt="drink" width="100%" height="100%">
+                            <div class="manu-desc">
+                                <p class="manu-name">新秀丽制造商
+                                    <span class="badge">上新</span>
+                                </p>
+                                <p class="manu-price">34.9元起</p>
+                            </div>
+                        </a>
+                        <a href="#" class="manufacturer small">
+                            <img class="enlarge" src="imgs/luggage.png" alt="drink" width="100%" height="100%">
+                            <div class="manu-desc">
+                                <p class="manu-name">MUJI制造商
+                                    <span class="badge">上新</span>
+                                </p>
+                                <p class="manu-price">39.9元起</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common new-products">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>新品首发</h3>
+                        </a>
+                        <span class="s-title fz14">为你寻觅世间好物</span>
+                    </div>
+                    <div class="fr lh1">
+                        <a href="#" class="more fz14">更多新品 ></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="recommendation">
+                <div class="section-common">
+                    <div class="section-common-top">
+                        <div class="fl lh1">
+                            <a href="#" class="b-title">
+                                <h3>人气推荐</h3>
+                            </a>
+                            <div class="tabList">
+                                <ul>
+                                    <li class="tabListItem active">
+                                        <a href="#">编辑推荐</a>
+                                    </li>
+                                    <li class="tabListItem">
+                                        <a href="#">热销总榜</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fr lh1">
+                            <a href="#" class="more fz14">更多推荐 ></a>
+                        </div>
+                    </div>
+                    <div class="recomm-container">
+                        <div class="recomm-content-list">
+                            <ul>
+                                <li class="active">
+                                    <div class="recommendationItem recomm-first">
+                                        <a href="#">
+                                            <div class="hd">
+                                                <img class="enlarge" src="imgs/earphone.png" alt="earphone">
+                                            </div>
+                                        </a>
+                                        <div class="bd">
+                                            <div class="commonTag">
+                                                <span class="itemTag hot">爆品</span>
+                                            </div>
+                                            <h4><a href="#">网易智造X3 Plus蓝牙HiFi耳机</a></h4>
+                                            <p class="recomm-price">¥199</p>
+                                        </div>
+                                    </div>
+                                    <div class="recomm-remain">
+                                        <div class="recomm-remain-top">
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <img class="enlarge" src="imgs/mattess.png" alt="mattess">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag">
+                                                        <span class="itemTag hot">爆品</span>
+                                                    </div>
+                                                    <h4><a href="#">AB面独立弹簧床垫 进口乳胶</a></h4>
+                                                    <p class="recomm-price">¥2599</p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <span class="colorNum">4色可选</span>
+                                                        <img class="enlarge" src="imgs/mattess.png" alt="mattess">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag">
+                                                        <span class="itemTag">转季特惠</span>
+                                                        <span class="itemTag">加价购</span>
+                                                    </div>
+                                                    <h4><a href="#">男式咖啡碳+5℃保暖套装（上衣+裤子）</a></h4>
+                                                    <p class="recomm-price"><span>¥68</span><span class="counterPrice">¥169</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <span class="colorNum">9色可选</span>
+                                                        <img class="enlarge" src="imgs/mattess.png" alt="mattess">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag"></div>
+                                                    <h4><a href="#">24寸 纯PC“铝框”（非全铝）拉杆箱</a></h4>
+                                                    <p class="recomm-price">¥389</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recomm-remain-bottom">
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <img class="enlarge" src="imgs/mattess.png" alt="mattess">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag">
+                                                        <span class="itemTag hot">爆品</span>
+                                                        <span class="itemTag">特价</span>
+                                                    </div>
+                                                    <h4><a href="#">纯牛奶 250毫升*24盒</a></h4>
+                                                    <p class="recomm-price"><span>¥78</span><span class="counterPrice">¥88</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <span class="colorNum">5色可选</span>
+                                                        <img class="enlarge" src="imgs/mattess.png" alt="mattess">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag">
+                                                        <span class="itemTag hot">爆品</span>
+                                                    </div>
+                                                    <h4><a href="#">全棉针织条纹四件套 新款</a></h4>
+                                                    <p class="recomm-price">¥299</p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <img class="enlarge" src="imgs/mattess.png" alt="mattess">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag">
+                                                        <span class="itemTag hot">爆品</span>
+                                                    </div>
+                                                    <h4><a href="#">智能马桶盖</a></h4>
+                                                    <p class="recomm-price">¥1599</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recommendationItem recomm-first">
+                                        <a href="#">
+                                            <div class="hd">
+                                                <img class="enlarge" src="imgs/napkin1.png" alt="napkin">
+                                            </div>
+                                        </a>
+                                        <div class="bd">
+                                            <div class="commonTag">
+                                            </div>
+                                            <h4><a href="#">6包/提 谷风一木 软抽面巾纸</a></h4>
+                                            <p class="recomm-price">¥16.9</p>
+                                        </div>
+                                    </div>
+                                    <div class="recomm-remain">
+                                        <div class="recomm-remain-top">
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <img class="enlarge" src="imgs/napkin2.png" alt="napkin">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag"></div>
+                                                    <h4><a href="#">12包/条 谷风一木 手帕纸</a></h4>
+                                                    <p class="recomm-price">¥5.9</p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <span class="colorNum">6色可选</span>
+                                                        <img class="enlarge" src="imgs/napkin2.png" alt="napkin">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag"></div>
+                                                    <h4><a href="#">软弹速干男/女沐浴拖鞋</a></h4>
+                                                    <p class="recomm-price">¥24.9</p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <span class="colorNum">7色可选</span>
+                                                        <img class="enlarge" src="imgs/napkin2.png" alt="napkin">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag"></div>
+                                                    <h4><a href="#">阿瓦提长绒棉超柔毛巾</a></h4>
+                                                    <p class="recomm-price">¥23</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recomm-remain-bottom">
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <img class="enlarge" src="imgs/napkin2.png" alt="napkin">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag"></div>
+                                                    <h4><a href="#">懒人抹布</a></h4>
+                                                    <p class="recomm-price">¥13.99</p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <span class="colorNum">4个口味</span>
+                                                        <img class="enlarge" src="imgs/napkin2.png" alt="napkin">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag"></div>
+                                                    <h4><a href="#">鲜果冻 30克*6颗</a></h4>
+                                                    <p class="recomm-price">¥14</p>
+                                                </div>
+                                            </div>
+                                            <div class="recommendationItem">
+                                                <a href="#">
+                                                    <div class="hd">
+                                                        <img class="enlarge" src="imgs/napkin2.png" alt="napkin">
+                                                    </div>
+                                                </a>
+                                                <div class="bd">
+                                                    <div class="commonTag">
+                                                        <span class="itemTag hot">爆品</span>
+                                                    </div>
+                                                    <h4><a href="#">日式和风声波式电动牙刷（可单买刷头）</a></h4>
+                                                    <p class="recomm-price">¥129</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common flashSale">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>限时购</h3>
+                        </a>
+                    </div>
+                    <div class="fr lh1">
+                        <a href="#" class="more fz14">更多抢购 ></a>
+                    </div>
+                </div>
+                <div class="flashSale-container">
+                    <a href="#">
+                        <div class="countdown">
+                            <p class="playTime">14点场</p>
+                            <p class="remainingTimeTitle">距离结束还剩</p>
+                            <div id="remainingTime">
+                                <span class="remainingTime">00</span>
+                                <span class="colon">:</span>
+                                <span class="remainingTime">04</span>
+                                <span class="colon">:</span>
+                                <span class="remainingTime">01</span>
+                            </div>
+                            <p class="viewAll">查看全部 ></p>
+                        </div>
+                    </a>
+                    <div class="flashSaleList">
+                        <div class="flashSaleListItem">
+                            <div class="itemImg">
+                                <a href="#">
+                                    <img src="imgs/dogFood.png" alt="dogFood">
+                                </a>
+                            </div>
+                            <div class="itemDesc">
+                                <h2><a href="#">全期犬粮 2.0KG</a></h2>
+                                <p>优质食材，薯类膨化多肉配方</p>
+                                <div class="itemNum">
+                                    <div class="numBar">
+                                        <div class="numBarIn"></div>
+                                    </div>
+                                    <span class="numTips">还剩300件</span>
+                                </div>
+                                <div class="itemPrice">
+                                    <span>限时价</span>
+                                    <span>¥74.8</span>
+                                    <span>¥88</span>
+                                </div>
+                                <a href="#">立即抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <footer></footer>
 
@@ -224,6 +1029,16 @@
     <script>
         $().ready(function() {
             noticeAutoScroll("#notice");
+            $(".tabListItem a").each(function(i) {
+                $(this).click(function(e) {
+                    e.preventDefault();
+                    $(".tabListItem,.recomm-content-list li").each(function() {
+                        $(this).removeClass("active");
+                    })
+                    $($(".tabListItem")[i]).addClass("active");
+                    $($(".recomm-content-list li")[i]).addClass("active");
+                });
+            });
         })
 
         function noticeAutoScroll(obj) {
@@ -239,7 +1054,7 @@
                     moveTop += perScrollHeight;
                     if ($(obj).css("top") === "-108px") {
                         $(obj).css("top", "0");
-                        moveTop = 0;
+                        moveTop = 36;
                     }
                 });
             }, 3000);
@@ -247,4 +1062,4 @@
     </script>
 </body>
 
-</html>
+</html>s
