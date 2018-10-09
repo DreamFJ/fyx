@@ -254,7 +254,8 @@
         }
         
         .manufacturer:hover .enlarge,
-        .recommendationItem:hover .enlarge {
+        .recommendationItem:hover .enlarge,
+        .flashSaleListItem:hover .enlarge {
             transform: scale(1.05);
         }
         
@@ -531,7 +532,7 @@
         
         .flashSaleListItem {
             float: left;
-            width: 433px;
+            width: 432px;
             height: 189px;
             border: 1px solid #f0ece4;
             border-left: none;
@@ -755,6 +756,10 @@
             color: #d4282d;
         }
         
+        .recomm-price .counterPrice {
+            font-size: 12px;
+        }
+        
         .counterPrice {
             color: #999;
             text-decoration: line-through;
@@ -923,6 +928,42 @@
             color: #999;
             line-height: 14px;
             margin-left: 10px;
+        }
+        
+        .itemPrice {
+            color: #be4141;
+            font-size: 14px;
+            line-height: 1;
+        }
+        
+        .yuan {
+            font-size: 18px;
+            margin-left: 4px;
+        }
+        
+        .itemPriceIn {
+            margin-right: 6px;
+            vertical-align: sub;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        
+        .toBuy {
+            background-color: #be4141;
+            color: #fff;
+            display: block;
+            width: 118px;
+            height: 31px;
+            margin-top: 18px;
+            line-height: 31px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 2px;
+        }
+        
+        .toBuy:hover {
+            background-color: #da4f4f;
+            color: #fff;
         }
     </style>
 </head>
@@ -1319,7 +1360,7 @@
                         <div class="flashSaleListItem">
                             <div class="itemImg">
                                 <a href="#">
-                                    <img src="imgs/dogFood.png" alt="dogFood">
+                                    <img class="enlarge" src="imgs/dogFood.png" alt="dogFood">
                                 </a>
                             </div>
                             <div class="itemDesc">
@@ -1333,10 +1374,83 @@
                                 </div>
                                 <div class="itemPrice">
                                     <span>限时价</span>
-                                    <span>¥74.8</span>
-                                    <span>¥88</span>
+                                    <span class="yuan">¥</span>
+                                    <span class="itemPriceIn">74.8</span>
+                                    <span class="counterPrice">¥88</span>
                                 </div>
-                                <a href="#">立即抢购</a>
+                                <a href="#" class="toBuy">立即抢购</a>
+                            </div>
+                        </div>
+                        <div class="flashSaleListItem">
+                            <div class="itemImg">
+                                <a href="#">
+                                    <img class="enlarge" src="imgs/dogFood.png" alt="dogFood">
+                                </a>
+                            </div>
+                            <div class="itemDesc">
+                                <h2><a href="#">全期犬粮 2.0KG</a></h2>
+                                <p>优质食材，薯类膨化多肉配方</p>
+                                <div class="itemNum">
+                                    <div class="numBar">
+                                        <div class="numBarIn"></div>
+                                    </div>
+                                    <span class="numTips">还剩300件</span>
+                                </div>
+                                <div class="itemPrice">
+                                    <span>限时价</span>
+                                    <span class="yuan">¥</span>
+                                    <span class="itemPriceIn">74.8</span>
+                                    <span class="counterPrice">¥88</span>
+                                </div>
+                                <a href="#" class="toBuy">立即抢购</a>
+                            </div>
+                        </div>
+                        <div class="flashSaleListItem">
+                            <div class="itemImg">
+                                <a href="#">
+                                    <img class="enlarge" src="imgs/dogFood.png" alt="dogFood">
+                                </a>
+                            </div>
+                            <div class="itemDesc">
+                                <h2><a href="#">全期犬粮 2.0KG</a></h2>
+                                <p>优质食材，薯类膨化多肉配方</p>
+                                <div class="itemNum">
+                                    <div class="numBar">
+                                        <div class="numBarIn"></div>
+                                    </div>
+                                    <span class="numTips">还剩300件</span>
+                                </div>
+                                <div class="itemPrice">
+                                    <span>限时价</span>
+                                    <span class="yuan">¥</span>
+                                    <span class="itemPriceIn">74.8</span>
+                                    <span class="counterPrice">¥88</span>
+                                </div>
+                                <a href="#" class="toBuy">立即抢购</a>
+                            </div>
+                        </div>
+                        <div class="flashSaleListItem">
+                            <div class="itemImg">
+                                <a href="#">
+                                    <img class="enlarge" src="imgs/dogFood.png" alt="dogFood">
+                                </a>
+                            </div>
+                            <div class="itemDesc">
+                                <h2><a href="#">全期犬粮 2.0KG</a></h2>
+                                <p>优质食材，薯类膨化多肉配方</p>
+                                <div class="itemNum">
+                                    <div class="numBar">
+                                        <div class="numBarIn"></div>
+                                    </div>
+                                    <span class="numTips">还剩300件</span>
+                                </div>
+                                <div class="itemPrice">
+                                    <span>限时价</span>
+                                    <span class="yuan">¥</span>
+                                    <span class="itemPriceIn">74.8</span>
+                                    <span class="counterPrice">¥88</span>
+                                </div>
+                                <a href="#" class="toBuy">立即抢购</a>
                             </div>
                         </div>
                     </div>
