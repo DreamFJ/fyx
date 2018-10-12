@@ -28,7 +28,9 @@
             background-color: #383838;
         }
         
-        .header-top-container {
+        .header-top-container,
+        .section-common,
+        footer {
             width: 1090px;
             margin: 0 auto;
         }
@@ -177,12 +179,11 @@
             display: block;
             clear: both;
         }
-        
-        .section-common {
+        /* .section-common {
             width: 1090px;
             margin-right: auto;
             margin-left: auto;
-        }
+        } */
         
         .b-title {
             margin-right: 20px;
@@ -202,8 +203,19 @@
         .section-common-container,
         .recomm-remain-top,
         .recomm-remain-bottom,
-        .recomm-content-list li.active {
+        .recomm-content-list li.active,
+        .home-container {
             display: flex;
+            justify-content: space-between;
+        }
+        
+        .recomm-remain,
+        .welfare-aside,
+        .welfare-stockpiling,
+        .stockpilingList,
+        .collection {
+            display: flex;
+            flex-direction: column;
             justify-content: space-between;
         }
         /* -----section common css end!-----*/
@@ -255,7 +267,8 @@
         
         .manufacturer:hover .enlarge,
         .recommendationItem:hover .enlarge,
-        .flashSaleListItem:hover .enlarge {
+        .flashSaleListItem:hover .enlarge,
+        .homeListItem:hover .enlarge {
             transform: scale(1.05);
         }
         
@@ -357,8 +370,12 @@
             white-space: nowrap;
         }
         
-        .recommendationItem .hd {
+        .hd {
             position: relative;
+            overflow: hidden;
+        }
+        
+        .recommendationItem .hd {
             border-bottom: 1px solid #F4F0EA;
         }
         
@@ -366,7 +383,8 @@
             margin-bottom: 18px;
         }
         
-        .recomm-remain .hd {
+        .recomm-remain .hd,
+        .homeListItem .hd {
             margin-bottom: 8px;
         }
         
@@ -413,11 +431,11 @@
             overflow: hidden;
         }
         
-        .recomm-remain {
+        .recomm-remain,
+        .welfare-aside .welfare-stockpiling,
+        .welfare-aside .welfare-app,
+        .stockpilingList {
             flex: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
         
         .recomm-remain .recommendationItem {
@@ -525,35 +543,39 @@
             border-radius: 15px;
             margin: 50px auto 0;
         }
-        
-        .flashSaleList {
+        /* .flashSaleList {
             float: left;
-        }
+        } */
         
         .flashSaleListItem {
             float: left;
             width: 432px;
-            height: 189px;
+            height: 187px;
             border: 1px solid #f0ece4;
             border-left: none;
         }
         
-        .itemImg {
+        .flashSaleListItem:nth-child(3),
+        .flashSaleListItem:nth-child(4) {
+            margin-top: -1px;
+        }
+        
+        .flashSaleListItem .itemImg {
             float: left;
             width: 180px;
             height: 180px;
             margin: 3px 0;
         }
         
-        .itemImg a {
+        .flashSaleListItem .itemImg a {
             display: block;
         }
         
-        .itemDesc {
+        .flashSaleListItem .itemDesc {
             margin: 14px 0 0 180px;
         }
         
-        .itemDesc h2 {
+        .flashSaleListItem .itemDesc h2 {
             height: 26px;
             line-height: 26px;
             font-size: 16px;
@@ -564,7 +586,7 @@
             overflow: hidden;
         }
         
-        .itemDesc p {
+        .flashSaleListItem .itemDesc p {
             height: 24px;
             font-size: 14px;
             font-weight: 400;
@@ -603,331 +625,10 @@
             color: #999;
             line-height: 14px;
             margin-left: 10px;
-        }
-        
-        .manufacturer.small .manu-name {
-            position: relative;
-            margin: 32px 0 10px 20px;
-            font-size: 20px;
-            text-align: left;
-        }
-        
-        .manufacturer.small .manu-price {
-            margin-left: 20px;
-            float: left;
-            padding-top: 10px;
-        }
-        /* 新品首发 */
-        
-        .new-products {
-            margin-top: 60px;
-        }
-        /* 人气推荐 */
-        
-        .recommendation {
-            padding: 60px 0;
-            background: #f4f0ea;
-        }
-        
-        .tabList {
-            display: inline-block;
-            margin-left: 13px;
-        }
-        
-        .tabListItem {
-            float: left;
-            font-size: 14px;
-            height: 28px;
-            line-height: 28px;
-            width: 70px;
-            text-align: center;
-            margin-right: 55px;
-        }
-        
-        .tabListItem.active {
-            border-bottom: 2px solid #b4a078;
-        }
-        
-        .tabListItem.active a {
-            color: #b4a078;
-        }
-        
-        .recommendationItem {
-            background-color: #fff;
-            text-align: center;
-        }
-        
-        .recomm-first {
-            width: 390px;
-        }
-        
-        .recomm-first img {
-            width: 320px;
-            height: 320px;
-            margin: 40px 35px;
-        }
-        
-        .recomm-first h4 {
-            font-size: 18px;
-            margin-bottom: 13px;
-        }
-        
-        .recomm-container h4 {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        
-        .recommendationItem .hd {
-            position: relative;
-            border-bottom: 1px solid #F4F0EA;
-        }
-        
-        .recomm-first .hd {
-            margin-bottom: 18px;
-        }
-        
-        .recomm-remain .hd {
-            margin-bottom: 8px;
-        }
-        
-        .hd .colorNum {
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            color: #a7936e;
-            border: 1px solid #b3a07d;
-            border-radius: 5px;
-            padding: 0 4px;
-            background-color: #f4f0ea;
-        }
-        
-        .commonTag {
-            height: 20px;
-            color: #fff;
-            width: 200px;
-            margin: 0 auto 3px;
-            overflow: hidden;
-            margin-bottom: 4px;
-        }
-        
-        .recomm-first .commonTag {
-            margin-bottom: 10px;
-        }
-        
-        .itemTag {
-            display: inline-block;
-            background-color: #e36844;
-            color: #fff;
-            padding: 0 5px;
-            height: 20px;
-            line-height: 20px;
-            margin-left: 6px;
-        }
-        
-        .itemTag.hot {
-            background-color: #F28F2D;
-        }
-        
-        .recomm-container {
-            height: 530px;
-            overflow: hidden;
-        }
-        
-        .recomm-remain {
-            flex: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .recomm-remain .recommendationItem {
-            margin-left: 10px;
-            width: 223px;
-            height: 260px;
-        }
-        
-        .recomm-remain img {
-            width: 180px;
-            height: 180px;
-        }
-        
-        .recomm-price {
-            color: #d4282d;
         }
         
         .recomm-price .counterPrice {
             font-size: 12px;
-        }
-        
-        .counterPrice {
-            color: #999;
-            text-decoration: line-through;
-            margin-left: 6px;
-        }
-        
-        .recomm-first .recomm-price {
-            font-size: 18px;
-        }
-        
-        .recomm-remain .recomm-price {
-            font-size: 13px;
-        }
-        
-        .recomm-remain-top .recommendationItem {
-            margin-bottom: 10px;
-        }
-        
-        .recomm-content-list li {
-            display: none;
-        }
-        /* 限时购 */
-        
-        .flashSale {
-            margin-top: 58px;
-        }
-        
-        .flashSale-container {
-            height: 377px;
-        }
-        
-        .countdown {
-            width: 224px;
-            height: 317px;
-            background: url('imgs/background.jpg') no-repeat;
-            padding-top: 60px;
-            text-align: center;
-            float: left;
-        }
-        
-        .playTime {
-            height: 36px;
-            font-size: 28px;
-            line-height: 36px;
-            color: #615548;
-            margin-bottom: 31px;
-        }
-        
-        .playTime::after {
-            content: '';
-            display: block;
-            width: 20px;
-            height: 2px;
-            margin: 11px auto 0;
-            background: #61594b;
-        }
-        
-        .remainingTimeTitle {
-            margin-bottom: 18px;
-            font-size: 18px;
-            color: #615548;
-            line-height: 22px;
-            height: 22px;
-        }
-        
-        .remainingTime {
-            display: inline-block;
-            width: 40px;
-            color: #fff;
-            font-size: 18px;
-            line-height: 40px;
-            background-color: #615548;
-            border-radius: 2px;
-        }
-        
-        .colon {
-            font-weight: 700;
-            padding: 0 2px;
-        }
-        
-        .viewAll {
-            width: 110px;
-            height: 30px;
-            line-height: 30px;
-            color: #fff;
-            font-size: 14px;
-            background-color: #a7936e;
-            border-radius: 15px;
-            margin: 50px auto 0;
-        }
-        
-        .flashSaleList {
-            float: left;
-        }
-        
-        .flashSaleListItem {
-            float: left;
-            width: 433px;
-            height: 189px;
-            border: 1px solid #f0ece4;
-            border-left: none;
-        }
-        
-        .itemImg {
-            float: left;
-            width: 180px;
-            height: 180px;
-            margin: 3px 0;
-        }
-        
-        .itemImg a {
-            display: block;
-        }
-        
-        .itemDesc {
-            margin: 14px 0 0 180px;
-        }
-        
-        .itemDesc h2 {
-            height: 26px;
-            line-height: 26px;
-            font-size: 16px;
-            font-weight: 400;
-            color: #666;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-        
-        .itemDesc p {
-            height: 24px;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            color: #999;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-        
-        .flashSaleListItem .itemNum {
-            padding: 14px 0 8px;
-            height: 14px;
-        }
-        
-        .numBar {
-            float: left;
-            width: 152px;
-            height: 10px;
-            margin: 2px 0;
-            border: 1px solid #f2cecd;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        
-        .numBarIn {
-            width: 141.5px;
-            background-color: #ffe5e5;
-            height: 10px;
-        }
-        
-        .numTips {
-            display: inline-block;
-            height: 14px;
-            font-size: 14px;
-            color: #999;
-            line-height: 14px;
-            margin-left: 10px;
         }
         
         .itemPrice {
@@ -936,19 +637,19 @@
             line-height: 1;
         }
         
-        .yuan {
+        .flashSaleListItem .yuan {
             font-size: 18px;
             margin-left: 4px;
         }
         
-        .itemPriceIn {
+        .flashSaleListItem .itemPriceIn {
             margin-right: 6px;
             vertical-align: sub;
             font-weight: 700;
             font-size: 24px;
         }
         
-        .toBuy {
+        .flashSaleListItem .toBuy {
             background-color: #be4141;
             color: #fff;
             display: block;
@@ -961,10 +662,292 @@
             border-radius: 2px;
         }
         
-        .toBuy:hover {
+        .flashSaleListItem .toBuy:hover,
+        .spListItem .toBuy:hover {
             background-color: #da4f4f;
             color: #fff;
         }
+        /* 福利社 */
+        
+        .welfare {
+            margin-top: 60px;
+            padding: 54px 0 52px;
+            height: 526px;
+            background-color: #f4f0ea;
+            box-sizing: border-box;
+        }
+        
+        .welfare-carousel {
+            width: 222px;
+            height: 374px;
+            border: 1px solid;
+            float: left;
+        }
+        
+        .welfare-sp {
+            float: left;
+            width: 625px;
+            height: 376px;
+            padding: 0 17px 0 19px;
+            background-color: #fff;
+            border-right: 1px solid #F4F0EA;
+            box-sizing: border-box;
+        }
+        
+        .welfare-content {
+            float: left;
+            width: 866px;
+            box-sizing: border-box;
+        }
+        
+        .all {
+            display: inline-block;
+            margin-top: 6px;
+        }
+        
+        .welfare-content-title {
+            padding: 19px 0 12px;
+        }
+        
+        .welfare-sp .welfare-content-title {
+            border-bottom: 1px solid #F4F0EA;
+        }
+        
+        .welfare-content-title .fl {
+            font-size: 16px;
+        }
+        
+        .welfare-spList {
+            margin-top: 20px;
+            margin-right: -20px;
+        }
+        
+        .spListItem {
+            width: 284px;
+            margin: 0 20px 20px 0;
+            float: left;
+        }
+        
+        .spListItem .itemImg {
+            position: relative;
+            float: left;
+            width: 130px;
+            height: 130px;
+            margin-right: 10px;
+            background-color: #FBF9F6;
+        }
+        
+        .spListItem .itemDesc .name {
+            display: inline-block;
+            max-width: 130px;
+            max-height: 40px;
+            overflow: hidden;
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        
+        .spListItem .itemPrice {
+            line-height: 1.1;
+        }
+        
+        .spListItem .yuan {
+            font-size: 12px;
+            vertical-align: -2px;
+        }
+        
+        .spListItem .itemPriceIn {
+            vertical-align: -2px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .spListItem .counterPrice {
+            margin-top: 2px;
+            font-size: 14px;
+            color: #A4A4A4;
+            line-height: 1.1;
+        }
+        
+        .spListItem .toBuy {
+            display: inline-block;
+            width: 90px;
+            height: 28px;
+            line-height: 26px;
+            color: #fff;
+            text-align: center;
+            margin-top: 6px;
+            background-color: #BE4141;
+            border: 1px solid #D25A5A;
+            border-radius: 2px;
+        }
+        
+        .spListItem .discount {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 38px;
+            height: 38px;
+            text-align: center;
+            line-height: 38px;
+            border-radius: 100%;
+            color: #fff;
+            background-color: #F78D33;
+            /* 让两个子元素span之间没有间距 */
+            font-size: 0;
+        }
+        
+        .discount .num {
+            font-size: 22px;
+            vertical-align: -2px;
+        }
+        
+        .discount span:last-child {
+            font-size: 12px;
+        }
+        
+        .welfare-aside {
+            float: left;
+            box-sizing: border-box;
+            padding: 0 20px 0 22px;
+            width: 241px;
+            height: 376px;
+            background-color: #fff;
+        }
+        
+        .welfare-aside img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .welfare-aside .itemImg {
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            background-color: #FBF9F6;
+        }
+        
+        .stockpilingListItem {
+            position: relative;
+        }
+        
+        .stockpilingListItem .itemDesc {
+            float: left;
+            line-height: 1.1;
+            font-size: 14px;
+        }
+        
+        .stockpilingListItem .itemDesc .name {
+            max-width: 129px;
+            margin: 4px 0 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+        
+        .shoppingCart i {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('imgs/shoppingCart.png') 0 -157px no-repeat;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        /* --居家home start-- */
+        
+        .home {
+            margin-top: 60px;
+        }
+        
+        .home .nav {
+            float: left;
+            margin-top: 14px;
+        }
+        
+        .nav li {
+            float: left;
+            font-size: 14px;
+        }
+        
+        .nav li b {
+            margin: 0 13px;
+        }
+        
+        .home .banner {
+            margin-bottom: 20px;
+        }
+        
+        .home .banner img {
+            width: 100%;
+            height: 310px;
+        }
+        
+        .home-container .listItem {
+            width: 256px;
+        }
+        
+        .homeListItem {
+            text-align: center;
+        }
+        
+        .homeListItem img {
+            width: 265px;
+            height: 265px;
+        }
+        
+        .homeListItem .hd {
+            background-color: #f4f4f4;
+        }
+        
+        .home-container {
+            margin-bottom: 50px;
+        }
+        /* --居家home end-- */
+        /* --甄选家selection start-- */
+        
+        .selection {
+            margin-bottom: 80px;
+        }
+        
+        .sampling {
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .sampling img {
+            width: 690px;
+            height: 380px;
+        }
+        
+        .collection {
+            float: left;
+            height: 380px;
+        }
+        
+        .collection img {
+            width: 390px;
+            height: 185px;
+        }
+        /* --甄选家selection end-- */
+        /* --大家都在说everyone-saying start-- */
+        
+        .everyone-saying {
+            box-sizing: border-box;
+            padding: 60px;
+            background: #f4f0ea;
+            height: 660px;
+            overflow: hidden;
+        }
+        /* --大家都在说everyone-saying end-- */
+        /* --footer start-- */
+        
+        footer {
+            height: 503px;
+        }
+        /* --footer start-- */
     </style>
 </head>
 
@@ -1457,8 +1440,698 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="welfare">
+                <div class="section-common">
+                    <div class="section-common-top">
+                        <div class="fl lh1">
+                            <a href="#" class="b-title">
+                                <h3>福利社</h3>
+                            </a>
+                        </div>
+                        <div class="fr lh1">
+                            <a href="#" class="more fz14">查看全部福利 &gt;</a>
+                        </div>
+                    </div>
+                    <div class="welfare-container">
+                        <div class="welfare-carousel">
+                            这里是轮播图
+                        </div>
+                        <div class="welfare-content">
+                            <div class="welfare-sp">
+                                <div class="welfare-content-title clearfix">
+                                    <div class="fl">今日特价</div>
+                                    <div class="fr">
+                                        <a href="#" class="all">查看全部 &gt;</a>
+                                    </div>
+                                </div>
+                                <div class="welfare-spList clearfix">
+                                    <div class="spListItem">
+                                        <div class="itemImg">
+                                            <a href="#">
+                                                <img src="imgs/toothbrush.png" alt="toothbrush">
+                                            </a>
+                                            <p class="discount">
+                                                <span class="num">8</span>
+                                                <span>折</span>
+                                            </p>
+                                        </div>
+                                        <div class="itemDesc">
+                                            <a href="#" class="name">泰国制造 天然乳胶床垫 7.5CM加厚款</a>
+                                            <div class="itemPrice">
+                                                <span>限时价</span>
+                                                <span class="yuan">¥</span>
+                                                <span class="itemPriceIn">2719</span>
+                                            </div>
+                                            <p class="counterPrice">¥3399</p>
+                                            <a href="#" class="toBuy">立即抢购</a>
+                                        </div>
+                                    </div>
+                                    <div class="spListItem">
+                                        <div class="itemImg">
+                                            <a href="#">
+                                                <img src="imgs/toothbrush.png" alt="toothbrush">
+                                            </a>
+                                            <p class="discount">
+                                                <span class="num">8</span>
+                                                <span>折</span>
+                                            </p>
+                                        </div>
+                                        <div class="itemDesc">
+                                            <a href="#" class="name">泰国制造 天然乳胶床垫 7.5CM加厚款</a>
+                                            <div class="itemPrice">
+                                                <span>限时价</span>
+                                                <span class="yuan">¥</span>
+                                                <span class="itemPriceIn">2719</span>
+                                            </div>
+                                            <p class="counterPrice">¥3399</p>
+                                            <a href="#" class="toBuy">立即抢购</a>
+                                        </div>
+                                    </div>
+                                    <div class="spListItem">
+                                        <div class="itemImg">
+                                            <a href="#">
+                                                <img src="imgs/toothbrush.png" alt="toothbrush">
+                                            </a>
+                                            <p class="discount">
+                                                <span class="num">8</span>
+                                                <span>折</span>
+                                            </p>
+                                        </div>
+                                        <div class="itemDesc">
+                                            <a href="#" class="name">泰国制造 天然乳胶床垫 7.5CM加厚款</a>
+                                            <div class="itemPrice">
+                                                <span>限时价</span>
+                                                <span class="yuan">¥</span>
+                                                <span class="itemPriceIn">2719</span>
+                                            </div>
+                                            <p class="counterPrice">¥3399</p>
+                                            <a href="#" class="toBuy">立即抢购</a>
+                                        </div>
+                                    </div>
+                                    <div class="spListItem">
+                                        <div class="itemImg">
+                                            <a href="#">
+                                                <img src="imgs/toothbrush.png" alt="toothbrush">
+                                            </a>
+                                            <p class="discount">
+                                                <span class="num">8</span>
+                                                <span>折</span>
+                                            </p>
+                                        </div>
+                                        <div class="itemDesc">
+                                            <a href="#" class="name">泰国制造 天然乳胶床垫 7.5CM加厚款</a>
+                                            <div class="itemPrice">
+                                                <span>限时价</span>
+                                                <span class="yuan">¥</span>
+                                                <span class="itemPriceIn">2719</span>
+                                            </div>
+                                            <p class="counterPrice">¥3399</p>
+                                            <a href="#" class="toBuy">立即抢购</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="welfare-aside">
+                                <div class="welfare-stockpiling">
+                                    <div class="welfare-content-title clearfix">
+                                        <div class="fl">量贩囤货</div>
+                                        <div class="fr">
+                                            <a href="#" class="all">全部 &gt;</a>
+                                        </div>
+                                    </div>
+                                    <div class="stockpilingList">
+                                        <div class="stockpilingListItem clearfix">
+                                            <div class="itemImg">
+                                                <a href="#">
+                                                    <img src="imgs/napkin3.png" alt="napkin">
+                                                </a>
+                                            </div>
+                                            <div class="itemDesc">
+                                                <div class="name">
+                                                    <a href="#" class="name">棉质生活 婴儿纯棉柔巾</a>
+                                                </div>
+                                                <div class="itemPrice">
+                                                    <span class="itemPriceIn">¥12.8</span>
+                                                    <span class="counterPrice">¥15</span>
+                                                </div>
+                                                <a href="#" class="shoppingCart">
+                                                    <i></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="stockpilingListItem clearfix">
+                                            <div class="itemImg">
+                                                <a href="#">
+                                                    <img src="imgs/napkin3.png" alt="napkin">
+                                                </a>
+                                            </div>
+                                            <div class="itemDesc">
+                                                <div class="name">
+                                                    <a href="#" class="name">棉质生活 婴儿纯棉柔巾</a>
+                                                </div>
+                                                <div class="itemPrice">
+                                                    <span class="itemPriceIn">¥12.8</span>
+                                                </div>
+                                                <a href="#" class="shoppingCart">
+                                                    <i></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="welfare-app">
+                                    <div class="welfare-content-title clearfix">
+                                        <div class="fl">今日APP价</div>
+                                        <div class="fr">
+                                            <a href="#" class="all">全部 &gt;</a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="appList"></div> -->
+                                    <div class="stockpilingList">
+                                        <div class="stockpilingListItem clearfix">
+                                            <div class="itemImg">
+                                                <a href="#">
+                                                    <img src="imgs/napkin3.png" alt="napkin">
+                                                </a>
+                                            </div>
+                                            <div class="itemDesc">
+                                                <div class="name">
+                                                    <a href="#" class="name">棉质生活 婴儿纯棉柔巾</a>
+                                                </div>
+                                                <div class="itemPrice">
+                                                    <span class="itemPriceIn">¥12.8</span>
+                                                    <span class="counterPrice">¥15</span>
+                                                </div>
+                                                <a href="#" class="shoppingCart">
+                                                    <i></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="stockpilingListItem clearfix">
+                                            <div class="itemImg">
+                                                <a href="#">
+                                                    <img src="imgs/napkin3.png" alt="napkin">
+                                                </a>
+                                            </div>
+                                            <div class="itemDesc">
+                                                <div class="name">
+                                                    <a href="#" class="name">棉质生活 婴儿纯棉柔巾</a>
+                                                </div>
+                                                <div class="itemPrice">
+                                                    <span class="itemPriceIn">¥12.8</span>
+                                                </div>
+                                                <a href="#" class="shoppingCart">
+                                                    <i></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common home">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>居家</h3>
+                        </a>
+                    </div>
+                    <div class="fr lh1">
+                        <ul class="nav">
+                            <li><a href="#">床品件套</a></li>
+                            <li><b>/</b><a href="#">被枕</a></li>
+                            <li><b>/</b><a href="#">家具</a></li>
+                            <li><b>/</b><a href="#">灯具</a></li>
+                            <li><b>/</b><a href="#">收纳</a></li>
+                            <li><b>/</b><a href="#">布艺软装</a></li>
+                            <li><b>/</b><a href="#">家饰</a></li>
+                        </ul>
+                        <a href="#" class="more fz14">查看更多 &gt;</a>
+                    </div>
+                </div>
+                <div class="banner">
+                    <a href="#"><img src="imgs/bedding.jpg" alt="居家好物一站购"></a>
+                </div>
+                <div class="home-container">
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">4色可选</span>
+                                <img class="enlarge" src="imgs/basket.png" alt="basket">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">居家特惠</span>
+                            </div>
+                            <h4><a href="#">60s臻密绒磨毛四件套</a></h4>
+                            <p class="recomm-price"><span>¥419</span><span class="counterPrice">¥499</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <img class="enlarge" src="imgs/basket.png" alt="basket">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag"></div>
+                            <h4><a href="#">网易智造壁挂式感应小夜灯</a></h4>
+                            <p class="recomm-price"><span>¥49</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <img class="enlarge" src="imgs/basket.png" alt="basket">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag"></div>
+                            <h4><a href="#">轻便午睡折叠床</a></h4>
+                            <p class="recomm-price"><span>¥299</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <img class="enlarge" src="imgs/basket.png" alt="basket">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag hot">爆品</span>
+                                <span class="itemTag">办公特惠</span>
+                            </div>
+                            <h4><a href="#">多功能人体工学转椅</a></h4>
+                            <p class="recomm-price"><span>¥1189</span><span class="counterPrice">¥1399</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common home">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>鞋包配饰</h3>
+                        </a>
+                    </div>
+                    <div class="fr lh1">
+                        <ul class="nav">
+                            <li><a href="#">行李箱</a></li>
+                            <li><b>/</b><a href="#">女士包袋</a></li>
+                            <li><b>/</b><a href="#">男士包袋</a></li>
+                            <li><b>/</b><a href="#">钱包及小皮件</a></li>
+                            <li><b>/</b><a href="#">女鞋</a></li>
+                            <li><b>/</b><a href="#">男鞋</a></li>
+                            <li><b>/</b><a href="#">拖鞋</a></li>
+                        </ul>
+                        <a href="#" class="more fz14">查看更多 &gt;</a>
+                    </div>
+                </div>
+                <div class="banner">
+                    <a href="#"><img src="imgs/decoration.jpg" alt="居家好物一站购"></a>
+                </div>
+                <div class="home-container">
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/necklace.png" alt="necklace">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag"></div>
+                            <h4><a href="#">牵绊永恒 双环镀金项链</a></h4>
+                            <p class="recomm-price">¥359</p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/necklace.png" alt="necklace">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">男式一脚蹬头层牛皮滑板鞋</a></h4>
+                            <p class="recomm-price"><span>¥142.4</span><span class="counterPrice">¥259</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/necklace.png" alt="necklace">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag"></div>
+                            <h4><a href="#">二合一后跟贴后跟垫</a></h4>
+                            <p class="recomm-price">¥9</p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <img class="enlarge" src="imgs/necklace.png" alt="necklace">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">璀璨灵动 耳坠</a></h4>
+                            <p class="recomm-price"><span>¥125.9</span><span class="counterPrice">¥229</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common home">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>服装</h3>
+                        </a>
+                    </div>
+                    <div class="fr lh1">
+                        <ul class="nav">
+                            <li><a href="#">毛衫</a></li>
+                            <li><b>/</b><a href="#">羽绒</a></li>
+                            <li><b>/</b><a href="#">风衣毛呢</a></li>
+                            <li><b>/</b><a href="#">牛仔裤</a></li>
+                            <li><b>/</b><a href="#">男式T恤</a></li>
+                            <li><b>/</b><a href="#">男式外套</a></li>
+                            <li><b>/</b><a href="#">男式衬衫</a></li>
+                        </ul>
+                        <a href="#" class="more fz14">查看更多 &gt;</a>
+                    </div>
+                </div>
+                <div class="banner">
+                    <a href="#"><img src="imgs/clothing.jpg" alt="服装"></a>
+                </div>
+                <div class="home-container">
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">4色可选</span>
+                                <img class="enlarge" src="imgs/clothes2.png" alt="clothes">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">秋冬特惠</span>
+                            </div>
+                            <h4><a href="#">牵绊永恒 双环镀金项链</a></h4>
+                            <p class="recomm-price"><span>¥142.4</span><span class="counterPrice">¥259</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/clothes2.png" alt="clothes">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">男式一脚蹬头层牛皮滑板鞋</a></h4>
+                            <p class="recomm-price"><span>¥142.4</span><span class="counterPrice">¥259</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/clothes2.png" alt="clothes">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag"></div>
+                            <h4><a href="#">二合一后跟贴后跟垫</a></h4>
+                            <p class="recomm-price">¥9</p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <img class="enlarge" src="imgs/clothes2.png" alt="clothes">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">璀璨灵动 耳坠</a></h4>
+                            <p class="recomm-price"><span>¥125.9</span><span class="counterPrice">¥229</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common home">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>电器</h3>
+                        </a>
+                    </div>
+                    <div class="fr lh1">
+                        <ul class="nav">
+                            <li><a href="#">生活电器</a></li>
+                            <li><b>/</b><a href="#">厨房电器</a></li>
+                            <li><b>/</b><a href="#">个护健康</a></li>
+                            <li><b>/</b><a href="#">数码</a></li>
+                            <li><b>/</b><a href="#">影音娱乐</a></li>
+                        </ul>
+                        <a href="#" class="more fz14">查看更多 &gt;</a>
+                    </div>
+                </div>
+                <div class="banner">
+                    <a href="#"><img src="imgs/electrical.jpg" alt="电器类"></a>
+                </div>
+                <div class="home-container">
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">4色可选</span>
+                                <img class="enlarge" src="imgs/electricOven.png" alt="electricOven">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">秋冬特惠</span>
+                            </div>
+                            <h4><a href="#">牵绊永恒 双环镀金项链</a></h4>
+                            <p class="recomm-price"><span>¥142.4</span><span class="counterPrice">¥259</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/electricOven.png" alt="electricOven">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">男式一脚蹬头层牛皮滑板鞋</a></h4>
+                            <p class="recomm-price"><span>¥142.4</span><span class="counterPrice">¥259</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/electricOven.png" alt="electricOven">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag"></div>
+                            <h4><a href="#">二合一后跟贴后跟垫</a></h4>
+                            <p class="recomm-price">¥9</p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <img class="enlarge" src="imgs/electricOven.png" alt="electricOven">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">璀璨灵动 耳坠</a></h4>
+                            <p class="recomm-price"><span>¥125.9</span><span class="counterPrice">¥229</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common home">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>洗护</h3>
+                        </a>
+                    </div>
+                    <div class="fr lh1">
+                        <ul class="nav">
+                            <li><a href="#">纸品湿巾</a></li>
+                            <li><b>/</b><a href="#">家庭清洁</a></li>
+                            <li><b>/</b><a href="#">生理用品</a></li>
+                            <li><b>/</b><a href="#">女性用品</a></li>
+                            <li><b>/</b><a href="#">浴室用具</a></li>
+                            <li><b>/</b><a href="#">毛巾浴巾</a></li>
+                            <li><b>/</b><a href="#">美妆</a></li>
+                        </ul>
+                        <a href="#" class="more fz14">查看更多 &gt;</a>
+                    </div>
+                </div>
+                <div class="banner">
+                    <a href="#"><img src="imgs/washnurse.jpg" alt="洗护"></a>
+                </div>
+                <div class="home-container">
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">4色可选</span>
+                                <img class="enlarge" src="imgs/lipstick.png" alt="lipstick">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">秋冬特惠</span>
+                            </div>
+                            <h4><a href="#">牵绊永恒 双环镀金项链</a></h4>
+                            <p class="recomm-price"><span>¥142.4</span><span class="counterPrice">¥259</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/lipstick.png" alt="lipstick">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">男式一脚蹬头层牛皮滑板鞋</a></h4>
+                            <p class="recomm-price"><span>¥142.4</span><span class="counterPrice">¥259</span></p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <span class="colorNum">2色可选</span>
+                                <img class="enlarge" src="imgs/lipstick.png" alt="lipstick">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag"></div>
+                            <h4><a href="#">二合一后跟贴后跟垫</a></h4>
+                            <p class="recomm-price">¥9</p>
+                        </div>
+                    </div>
+                    <div class="homeListItem">
+                        <a href="#">
+                            <div class="hd">
+                                <img class="enlarge" src="imgs/lipstick.png" alt="lipstick">
+                            </div>
+                        </a>
+                        <div class="bd">
+                            <div class="commonTag">
+                                <span class="itemTag">特价</span>
+                            </div>
+                            <h4><a href="#">璀璨灵动 耳坠</a></h4>
+                            <p class="recomm-price"><span>¥125.9</span><span class="counterPrice">¥229</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-common selection">
+                <div class="section-common-top">
+                    <div class="fl lh1">
+                        <a href="#" class="b-title">
+                            <h3>甄选家</h3>
+                        </a>
+                        <span class="s-title fz14">我们在寻找，对生活有态度的你</span>
+                    </div>
+                </div>
+                <div class="selection-container clearfix">
+                    <div class="sampling">
+                        <a href="#"><img src="imgs/pick.jpg" alt="样品试用"></a>
+                    </div>
+                    <div class="collection">
+                        <div class="suggestion">
+                            <a href="#"><img src="imgs/suggestion.jpg" alt="建议征集"></a>
+                        </div>
+                        <div class="style">
+                            <a href="#"><img src="imgs/style.jpg" alt="样品甄选"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="everyone-saying">
+                <div class="section-common">
+                    <div class="section-common-top">
+                        <div class="fl lh1">
+                            <a href="#" class="b-title">
+                                <h3>大家都在说</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="everyone-saying-container">
+                    轮播图
+                </div>
+            </div>
+        </section>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="foot-top">
+            <div class="custom-service">
+                <h4>客户服务</h4>
+                <a href="#">
+                    <i></i>
+                    <p>在线客服</p>
+                </a>
+                <a href="#">
+                    <i></i>
+                    <p>用户反馈</p>
+                </a>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="foot-bottom"></div>
+    </footer>
 
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
